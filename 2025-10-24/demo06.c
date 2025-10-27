@@ -1,5 +1,5 @@
 #include <stdio.h>
-// devolve a dimensao util da string
+// Imprime uma string e coloca um \n final
 void print_string(char s[]){
   int i=0;
   while (s[i]!='\0')
