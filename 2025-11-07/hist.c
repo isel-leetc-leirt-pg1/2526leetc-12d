@@ -2,6 +2,7 @@
 #include <ctype.h>
 
 #define N_CHARS ('z'-'a'+1)
+#define HIST_MAX_CHARS 60.0
 
 void array_inic(int arr[], int n, int value) {
   for (int i=0; i<n; i++)
@@ -22,8 +23,12 @@ void linha(int n, char ch){
 
 void array_hist(int arr[], int n, int maxCount) {
   for (int i=0; i<n; i++) {
-    printf("[%c] --> Occ=%d ", 'a'+i, arr[i]);
-    linha((int) (arr[i]*60.0/maxCount), '*');
+    printf("[%c] --> Occ=%-4d ", 'a'+i, arr[i]);
+    double dim_barra = (arr[i]*(HIST_MAX_CHARS/maxCount));
+    if (dim_barra!=0.0) 
+      if (dim_barra<1) dim_barra=1.0;
+
+    linha((int) dim_barra, '*');
   }
 }
 
