@@ -1,8 +1,10 @@
 # Ignora tudo
 *
 
-# Exceto:
-!*/
+# Ignora pasta serie03 de forma absoluta
+/serie03/
+
+# Exceto arquivos específicos
 !*.c
 !*.h
 !Makefile
