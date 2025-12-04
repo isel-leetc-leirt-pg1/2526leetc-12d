@@ -8,7 +8,7 @@
 
 #define SIZE_X  (BOARD_WIDTH/N_COLS)  // 100
 #define SIZE_Y (BOARD_HEIGHT/N_ROWS) // 100
- 
+
 int main(){
     graph_init2("Chess Board", BOARD_WIDTH, BOARD_HEIGHT);
 
@@ -17,8 +17,8 @@ int main(){
             RGB color = (row+col)%2==0 ? c_orange : c_green;
             graph_rect(SIZE_X*col, row*SIZE_Y, SIZE_X, SIZE_Y,
                            color, true);
-        } 
-             
+        }
+
     graph_start();
-    return 0;  
+    return 0;
 }
