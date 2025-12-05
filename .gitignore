@@ -1,10 +1,16 @@
 # Ignora tudo
 *
 
-# Ignora pasta serie03 de forma absoluta
+# Reativa pastas
+!*/
+
+# Ignora a pasta serie03 de forma absoluta
 /serie03/
 
-# Exceto arquivos específicos
+# Reativa pastas que começam por 2025-
+!/2025-*/
+
+# Permite ficheiros específicos
 !*.c
 !*.h
 !Makefile
